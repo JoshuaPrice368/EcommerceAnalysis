@@ -108,7 +108,7 @@ CREATE VIEW dim_product AS
         `Category` 
 	FROM ecommerce_sales_large;
     
-
+-- age group Dimension table
 CREATE VIEW dim_age_group AS
 	SELECT DISTINCT 
 		CASE
@@ -120,17 +120,20 @@ CREATE VIEW dim_age_group AS
 END AS age_group
 FROM ecommerce_sales_large;
 
+-- Region Dimension table
 CREATE VIEW dim_region AS
 SELECT DISTINCT
 REGION 
 FROM 
 ecommerce_sales_large;
 
+-- payment method Dimension table
 CREATE VIEW dim_payment_method AS
 SELECT DISTINCT 
 `Payment Method`
 FROM ecommerce_sales_large;
 
+-- Gender Dimension table
 CREATE VIEW dim_gender AS 
 SELECT DISTINCT
 `Customer Gender`
